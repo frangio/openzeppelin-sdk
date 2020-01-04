@@ -3,6 +3,8 @@ import pickBy from 'lodash.pickby';
 import chalk from 'chalk';
 import Spinnies from 'spinnies';
 
+import { getCallSite } from './call-site';
+
 const spinners = new Spinnies({
   spinnerColor: 'blueBright',
   succeedColor: 'blueBright',
@@ -195,7 +197,8 @@ export class Loggy {
   public static noSpin = logSpinner(SpinnerAction.NonSpinnable);
 }
 
-type LogFunction = (file: string, fnName: string, reference: string, text: string) => void;
+type LogFunction = (reference: string, text: string) => void;
+type LogFunctionWithCallSite = (file: string, fnName: string, reference: string, text: string) => void;
 
 type LogTypeFunctions = {
   [t in keyof typeof logTypes]: LogFunction & { onVerbose: LogFunction };
@@ -204,31 +207,42 @@ type LogTypeFunctions = {
 type LogSpinFunction = LogFunction & LogTypeFunctions & { onVerbose: LogFunction };
 
 function logSpinner(action: SpinnerAction): LogSpinFunction {
-  const log: Partial<LogSpinFunction> = (file, fnName, reference, text): void =>
+  const log: LogFunction & Partial<LogSpinFunction> = withCallSite((file, fnName, reference, text): void =>
     Loggy.add(file, fnName, reference, text, {
       spinnerAction: action,
-    });
+    }),
+  );
 
-  log.onVerbose = (file, fnName, reference, text): void =>
+  log.onVerbose = withCallSite((file, fnName, reference, text): void =>
     Loggy.add(file, fnName, reference, text, {
       spinnerAction: action,
       logLevel: LogLevel.Verbose,
-    });
+    }),
+  );
 
   for (const logType in logTypes) {
-    log[logType] = (file, fnName, reference, text): void =>
+    log[logType] = withCallSite((file, fnName, reference, text): void =>
       Loggy.add(file, fnName, reference, text, {
         spinnerAction: action,
         logType: logTypes[logType],
-      });
+      }),
+    );
 
-    log[logType].onVerbose = (file, fnName, reference, text): void =>
+    log[logType].onVerbose = withCallSite((file, fnName, reference, text): void =>
       Loggy.add(file, fnName, reference, text, {
         spinnerAction: action,
         logType: logTypes[logType],
         logLevel: LogLevel.Verbose,
-      });
+      }),
+    );
   }
 
   return log as LogSpinFunction;
+}
+
+function withCallSite(logWithCallSite: LogFunctionWithCallSite): LogFunction {
+  return function log(reference, text): void {
+    const { fileName, functionName } = getCallSite(log);
+    logWithCallSite(fileName, functionName, reference, text);
+  };
 }
