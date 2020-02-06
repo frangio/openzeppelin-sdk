@@ -43,13 +43,13 @@ export async function compile(
   const { compileWithTruffle, compileWithSolc } = exports;
   const compilePromise = useTruffle ? compileWithTruffle() : compileWithSolc(resolvedOptions);
   const compileResult = await compilePromise;
-  const compileVersion = compileResult && compileResult.compilerVersion && compileResult.compilerVersion.version;
+  const compileVersion = compileResult?.compilerVersion?.version;
   const compileVersionOptions = compileVersion ? { version: compileVersion } : null;
 
   // Run typechain if requested
-  if (resolvedOptions.typechain && resolvedOptions.typechain.enabled) {
+  if (resolvedOptions.typechain?.enabled) {
     const result = compileResult as ProjectCompileResult;
-    const filesList = result && result.artifacts ? result.artifacts.map(c => c.contractName).join(',') : '*';
+    const filesList = result?.artifacts ? result.artifacts.map(c => c.contractName).join(',') : '*';
     const filesGlob = `${resolvedOptions.outputDir}/${filesList}.json`;
     await typechain(filesGlob, resolvedOptions.typechain.outDir, resolvedOptions.typechain.target);
   }
