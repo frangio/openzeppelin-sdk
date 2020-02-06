@@ -1,5 +1,5 @@
 import path from 'path';
-import { max, maxBy, pick, omitBy, isUndefined } from 'lodash';
+import { max, maxBy, pick, omitBy, isUndefined, countBy } from 'lodash';
 import { readJsonSync, ensureDirSync, readJSON, writeJson, unlink } from 'fs-extra';
 import { statSync, existsSync, readdirSync, lstatSync } from 'fs';
 import { Loggy, Contracts } from '@openzeppelin/upgrades';
@@ -158,6 +158,12 @@ class SolidityProjectCompiler {
   }
 
   private async _writeOutput(): Promise<void> {
+    const duplicate = this._findDuplicateContractName();
+
+    if (duplicate !== undefined) {
+      throw new Error(`Cannot compile two different contracts with same name ('${duplicate}')`);
+    }
+
     // Create directory if not exists, or clear it of artifacts if it does,
     // preserving networks deployment info
     const networksInfo = {};
@@ -193,5 +199,16 @@ class SolidityProjectCompiler {
       .map(fileName => path.resolve(this.outputDir, fileName))
       .filter(fileName => !lstatSync(fileName).isDirectory())
       .filter(fileName => path.extname(fileName) === '.json');
+  }
+
+  private _findDuplicateContractName(): string | undefined {
+    const names = this.compilerOutput.map(data => data.contractName);
+    const counts = countBy(names);
+
+    for (const name in counts) {
+      if (counts[name] > 1) {
+        return name;
+      }
+    }
   }
 }
