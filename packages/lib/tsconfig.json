@@ -1,13 +1,15 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "../../tsconfig-base.json",
   "compilerOptions": {
-    "outDir": "./lib",
+    "composite": true,
+    "outDir": "lib",
+    "rootDir": "src",
     "allowJs": false,
     "noEmitOnError": true,
     "declaration": true,
     "sourceMap": true
   },
   "include": [
-    "./src"
+    "src"
   ]
 }

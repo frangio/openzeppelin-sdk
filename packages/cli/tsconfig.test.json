@@ -1,9 +1,16 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "./tsconfig.json",
   "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "test-build",
     "allowJs": true
   },
+  "references": [
+    { "path": "../lib" }
+  ],
   "include": [
-    "./src"
-  ]
+    "src",
+    "test"
+  ],
+  "exclude": []
 }

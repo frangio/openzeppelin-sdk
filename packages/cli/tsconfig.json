@@ -1,16 +1,22 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "../../tsconfig-base.json",
   "compilerOptions": {
-    "outDir": "./lib",
+    "composite": true,
+    "rootDir": "src",
+    "outDir": "lib",
     "allowJs": false,
     "noEmitOnError": true,
     "declaration": true,
     "sourceMap": true
   },
+  "references": [
+    { "path": "../lib" }
+  ],
   "include": [
-    "./src"
+    "src"
   ],
   "exclude": [
-    "src/models/config/blueprint.networks.js"
+    "src/models/config/blueprint.networks.js",
+    "src/test"
   ]
 }
