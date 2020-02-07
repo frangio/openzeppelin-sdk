@@ -68,12 +68,12 @@ describe('SolidityContractsCompiler', function() {
     source: 'contract ExampleNoPragma05 { function f() public pure returns (string memory) { return "bla"; } }',
   };
 
-  before('stub solc list', function() {
+  before('stub solc list', async function() {
     setSolcCachePath(path.resolve(__dirname, '../../../../solc/'));
     sinon
       .stub(axios, 'get')
       .withArgs('https://solc-bin.ethereum.org/bin/list.json')
-      .resolves({ data: require('../../../../solc/list.json') });
+      .resolves({ data: await loadJSON('../../../../solc/list.json') });
   });
 
   after('clear stubs', function() {
@@ -298,4 +298,8 @@ function assertOutput(contracts, output, { version, optimizer, evmVersion }) {
     data.compiler.optimizer.should.be.deep.equal(optimizer || { enabled: false });
     data.compiler.evmVersion.should.be.eq(evmVersion || 'constantinople');
   });
+}
+
+function loadJSON(relativePath) {
+  return fs.readJSON(require.resolve(relativePath));
 }

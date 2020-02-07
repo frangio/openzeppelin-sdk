@@ -165,10 +165,10 @@ describe('telemetry', function() {
               userEnvironment.platform.should.eq('awesome-linux');
               userEnvironment.arch.should.eq('x128');
               userEnvironment.nodeVersion.should.eq('v18.01');
-              userEnvironment.cliVersion.should.eq(require('../package.json').version);
-              userEnvironment.upgradesVersion.should.eq(require('../../lib/package.json').version);
-              userEnvironment.truffleVersion.should.eq(require('truffle/package.json').version);
-              userEnvironment.web3Version.should.eq(require('web3/package.json').version);
+              userEnvironment.cliVersion.should.eq(await loadJSON('../package.json').version);
+              userEnvironment.upgradesVersion.should.eq(await loadJSON('../../lib/package.json').version);
+              userEnvironment.truffleVersion.should.eq(await loadJSON('truffle/package.json').version);
+              userEnvironment.web3Version.should.eq(await loadJSON('web3/package.json').version);
             });
           });
         });
@@ -176,6 +176,10 @@ describe('telemetry', function() {
     });
   });
 });
+
+function loadJSON(relativePath) {
+  return fs.readJSON(require.resolve(relativePath));
+}
 
 function shouldConcealOptions(commandData) {
   commandData.stringField.should.match(/^[a-f0-9]{64}$/);

@@ -112,9 +112,9 @@ async function getUserEnvironment(): Promise<UserEnvironment> {
     arch: process.arch,
     nodeVersion: process.version,
     cliVersion: await getCLIVersion(),
-    upgradesVersion: getDependencyVersion('@openzeppelin/upgrades'),
-    truffleVersion: getDependencyVersion('truffle'),
-    web3Version: getDependencyVersion('web3'),
+    upgradesVersion: await getDependencyVersion('@openzeppelin/upgrades'),
+    truffleVersion: await getDependencyVersion('truffle'),
+    web3Version: await getDependencyVersion('web3'),
   };
 }
 
@@ -122,9 +122,10 @@ async function getCLIVersion(): Promise<string> {
   return JSON.parse(await fs.readFile(__dirname + '/../../package.json', 'utf8')).version;
 }
 
-function getDependencyVersion(dep: string): string | undefined {
+async function getDependencyVersion(dep: string): Promise<string | undefined> {
   try {
-    return require(`${dep}/package.json`).version;
+    const pkg = await fs.readJSON(require.resolve(`${dep}/package.json`));
+    return pkg.version;
   } catch {
     return undefined;
   }
