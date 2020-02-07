@@ -6,7 +6,6 @@ import { Loggy } from '@openzeppelin/upgrades';
 
 import { OPEN_ZEPPELIN_FOLDER } from '../files/constants';
 import KitFile, { MANIFEST_VERSION } from '../files/KitFile';
-import kitConfigSchema from '../files/kit-config.schema.json';
 import patch from '../../utils/patch';
 import child from '../../utils/child';
 
@@ -69,6 +68,7 @@ export default class KitController {
       // validate our json config
       // TODO: derive the schema directly from the KitConfig type
       const ajv = new Ajv({ allErrors: true });
+      const kitConfigSchema = await fs.readJSON(__dirname + '/../files/kit-config.schema.json');
       const test = ajv.compile(kitConfigSchema);
       const isValid = test(config);
       if (!isValid) {
