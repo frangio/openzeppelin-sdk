@@ -4,12 +4,12 @@ require('../setup');
 import { random } from 'lodash';
 import { accounts } from '@openzeppelin/test-environment';
 
-import querySignedDeployment from '../../src/scripts/query-signed-deployment';
-import ProjectFile from '../../src/models/files/ProjectFile';
-import NetworkFile from '../../src/models/files/NetworkFile';
+import querySignedDeployment from '../../scripts/query-signed-deployment';
+import ProjectFile from '../../models/files/ProjectFile';
+import NetworkFile from '../../models/files/NetworkFile';
 import { helpers } from '@openzeppelin/upgrades';
-import push from '../../src/scripts/push';
-import queryDeployment from '../../src/scripts/query-deployment';
+import push from '../../scripts/push';
+import queryDeployment from '../../scripts/query-deployment';
 
 const should = require('chai').should();
 

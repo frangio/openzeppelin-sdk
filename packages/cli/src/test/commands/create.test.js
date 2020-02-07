@@ -2,7 +2,7 @@
 require('../setup');
 
 import { stubCommands, itShouldParse } from './share';
-import { ProxyType } from '../../src/scripts/interfaces';
+import { ProxyType } from '../../scripts/interfaces';
 
 describe('create command', function() {
   stubCommands();

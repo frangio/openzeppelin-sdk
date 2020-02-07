@@ -5,11 +5,11 @@ import sinon from 'sinon';
 import fs from 'fs-extra';
 import axios from 'axios';
 
-import { OPEN_ZEPPELIN_FOLDER } from '../../src/models/files/constants';
-import child from '../../src/utils/child';
-import patch, { cache } from '../../src/utils/patch';
-import unpack from '../../src/scripts/unpack';
-import { MANIFEST_VERSION } from '../../src/models/files/KitFile';
+import { OPEN_ZEPPELIN_FOLDER } from '../../models/files/constants';
+import child from '../../utils/child';
+import patch, { cache } from '../../utils/patch';
+import unpack from '../../scripts/unpack';
+import { MANIFEST_VERSION } from '../../models/files/KitFile';
 
 const simpleGit = patch('simple-git/promise');
 

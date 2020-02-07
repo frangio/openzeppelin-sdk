@@ -1,7 +1,7 @@
 'use strict';
 require('../setup');
 
-import { fromContractFullName, toContractFullName } from '../../src/utils/naming';
+import { fromContractFullName, toContractFullName } from '../../utils/naming';
 
 describe('naming', function() {
   describe('fromContractFullName', function() {

@@ -1,10 +1,10 @@
 'use strict';
 require('../setup');
 
-import add from '../../src/scripts/add';
-import bump from '../../src/scripts/bump';
-import link from '../../src/scripts/link';
-import ProjectFile from '../../src/models/files/ProjectFile';
+import add from '../../scripts/add';
+import bump from '../../scripts/bump';
+import link from '../../scripts/link';
+import ProjectFile from '../../models/files/ProjectFile';
 
 describe('bump script', function() {
   const newVersion = '0.2.0';

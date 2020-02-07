@@ -1,8 +1,8 @@
 'use strict';
 require('../setup');
 
-import remove from '../../src/scripts/remove';
-import ProjectFile from '../../src/models/files/ProjectFile';
+import remove from '../../scripts/remove';
+import ProjectFile from '../../models/files/ProjectFile';
 import CaptureLogs from '../helpers/captureLogs';
 
 const should = require('chai').should();

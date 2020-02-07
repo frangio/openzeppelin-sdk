@@ -5,11 +5,11 @@ process.env.NODE_ENV = 'test';
 import { ZWeb3, Contracts, Loggy, assertions } from '@openzeppelin/upgrades';
 import { provider } from '@openzeppelin/test-environment';
 
-import { OPEN_ZEPPELIN_FOLDER } from '../src/models/files/constants';
-import Dependency from '../src/models/dependency/Dependency';
-import ProjectFile from '../src/models/files/ProjectFile';
-import NetworkFile from '../src/models/files/NetworkFile';
-import Session from '../src/models/network/Session';
+import { OPEN_ZEPPELIN_FOLDER } from '../models/files/constants';
+import Dependency from '../models/dependency/Dependency';
+import ProjectFile from '../models/files/ProjectFile';
+import NetworkFile from '../models/files/NetworkFile';
+import Session from '../models/network/Session';
 
 import chaiAsPromised from 'chai-as-promised';
 import chaiString from 'chai-string';

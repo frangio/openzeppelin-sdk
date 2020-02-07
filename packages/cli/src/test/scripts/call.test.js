@@ -4,14 +4,14 @@ require('../setup');
 import utils from 'web3-utils';
 import { accounts } from '@openzeppelin/test-environment';
 
-import add from '../../src/scripts/add';
-import push from '../../src/scripts/push';
-import call from '../../src/scripts/call';
-import sendTx from '../../src/scripts/send-tx';
-import createProxy from '../../src/scripts/create';
+import add from '../../scripts/add';
+import push from '../../scripts/push';
+import call from '../../scripts/call';
+import sendTx from '../../scripts/send-tx';
+import createProxy from '../../scripts/create';
 import CaptureLogs from '../helpers/captureLogs';
-import ProjectFile from '../../src/models/files/ProjectFile';
-import NetworkFile from '../../src/models/files/NetworkFile';
+import ProjectFile from '../../models/files/ProjectFile';
+import NetworkFile from '../../models/files/NetworkFile';
 
 describe('call script', function() {
   const [account] = accounts;

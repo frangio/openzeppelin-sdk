@@ -3,9 +3,9 @@ require('../setup');
 
 const expect = require('chai').expect;
 
-import NetworkFile from '../../src/models/files/NetworkFile';
-import ProjectFile from '../../src/models/files/ProjectFile';
-import { MANIFEST_VERSION } from '../../src/models/files/ManifestVersion';
+import NetworkFile from '../../models/files/NetworkFile';
+import ProjectFile from '../../models/files/ProjectFile';
+import { MANIFEST_VERSION } from '../../models/files/ManifestVersion';
 
 describe('NetworkFile', function() {
   beforeEach('loads parent package file', function() {

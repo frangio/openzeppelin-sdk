@@ -4,15 +4,15 @@ require('../setup');
 import sinon from 'sinon';
 import { expect } from 'chai';
 
-import * as prompt from '../../src/prompts/prompt';
+import * as prompt from '../../prompts/prompt';
 
 import inquirer from 'inquirer';
 import { ContractMethodMutability as Mutability } from '@openzeppelin/upgrades';
 
-import ContractManager from '../../src/models/local/ContractManager';
-import ConfigManager from '../../src/models/config/ConfigManager';
-import ProjectFile from '../../src/models/files/ProjectFile';
-import { promptIfNeeded, contractsList, networksList, methodsList, argsList } from '../../src/prompts/prompt';
+import ContractManager from '../../models/local/ContractManager';
+import ConfigManager from '../../models/config/ConfigManager';
+import ProjectFile from '../../models/files/ProjectFile';
+import { promptIfNeeded, contractsList, networksList, methodsList, argsList } from '../../prompts/prompt';
 
 describe('prompt', function() {
   describe('functions', function() {

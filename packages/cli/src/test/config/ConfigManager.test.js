@@ -5,7 +5,7 @@ import fs from 'fs';
 import sinon from 'sinon';
 import { Contracts, ZWeb3 } from '@openzeppelin/upgrades';
 
-import ConfigManager from '../../src/models/config/ConfigManager';
+import ConfigManager from '../../models/config/ConfigManager';
 
 const expectToBehaveLikeConfig = configFileDir => {
   describe('functions', function() {

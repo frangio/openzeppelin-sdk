@@ -1,7 +1,7 @@
 'use strict';
 require('../setup');
 
-import { isValidUnit, prettifyTokenAmount, toWei, fromWei } from '../../src/utils/units';
+import { isValidUnit, prettifyTokenAmount, toWei, fromWei } from '../../utils/units';
 
 describe('units', function() {
   describe('functions', function() {

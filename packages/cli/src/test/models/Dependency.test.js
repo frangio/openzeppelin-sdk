@@ -7,7 +7,7 @@ import { accounts } from '@openzeppelin/test-environment';
 
 import sinon from 'sinon';
 import npm from 'npm-programmatic';
-import Dependency from '../../src/models/dependency/Dependency';
+import Dependency from '../../models/dependency/Dependency';
 
 describe('Dependency', function() {
   const [from] = accounts;

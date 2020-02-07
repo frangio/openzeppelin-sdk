@@ -7,14 +7,14 @@ import { accounts } from '@openzeppelin/test-environment';
 import CaptureLogs from '../helpers/captureLogs';
 import { Contracts, Logger, helpers, Proxy, MinimalProxy, assertRevert } from '@openzeppelin/upgrades';
 
-import add from '../../src/scripts/add';
-import push from '../../src/scripts/push';
-import create from '../../src/scripts/create';
-import queryDeployment from '../../src/scripts/query-deployment';
-import link from '../../src/scripts/link';
-import ProjectFile from '../../src/models/files/ProjectFile';
-import { ProxyType } from '../../src/scripts/interfaces';
-import NetworkFile from '../../src/models/files/NetworkFile';
+import add from '../../scripts/add';
+import push from '../../scripts/push';
+import create from '../../scripts/create';
+import queryDeployment from '../../scripts/query-deployment';
+import link from '../../scripts/link';
+import ProjectFile from '../../models/files/ProjectFile';
+import { ProxyType } from '../../scripts/interfaces';
+import NetworkFile from '../../models/files/NetworkFile';
 
 const should = require('chai').should();
 

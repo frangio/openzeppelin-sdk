@@ -5,9 +5,9 @@ import fs from 'fs-extra';
 import sinon from 'sinon';
 import { cleanup } from '../helpers/cleanup';
 
-import init from '../../src/scripts/init';
-import ProjectFile from '../../src/models/files/ProjectFile';
-import ConfigManager from '../../src/models/config/ConfigManager';
+import init from '../../scripts/init';
+import ProjectFile from '../../models/files/ProjectFile';
+import ConfigManager from '../../models/config/ConfigManager';
 
 describe('init script', function() {
   const name = 'MyApp';

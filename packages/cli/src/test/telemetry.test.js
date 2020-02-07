@@ -13,10 +13,11 @@ import process from 'process';
 import 'firebase/auth';
 import 'firebase/firestore';
 
-import Telemetry from '../src/telemetry';
-import ProjectFile from '../src/models/files/ProjectFile';
 
-import * as prompt from '../src/prompts/prompt';
+import Telemetry from '../telemetry';
+import ProjectFile from '../models/files/ProjectFile';
+
+import * as prompt from '../prompts/prompt';
 
 describe('telemetry', function() {
   before(function() {

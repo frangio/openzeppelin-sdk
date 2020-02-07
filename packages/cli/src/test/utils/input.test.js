@@ -3,7 +3,7 @@ require('../setup');
 
 const expect = require('chai').expect;
 
-import { parseArgs, parseMethodParams, parseArray, parseArg, getSampleInput } from '../../src/utils/input';
+import { parseArgs, parseMethodParams, parseArray, parseArg, getSampleInput } from '../../utils/input';
 
 describe('input', function() {
   describe('parseArgs', function() {

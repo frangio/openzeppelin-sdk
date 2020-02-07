@@ -7,9 +7,9 @@ import { expect } from 'chai';
 
 import sinon from 'sinon';
 import { Contracts } from '@openzeppelin/upgrades';
-import ContractManager from '../../src/models/local/ContractManager';
-import ProjectFile from '../../src/models/files/ProjectFile';
-import ConfigManager from '../../src/models/config/ConfigManager';
+import ContractManager from '../../models/local/ContractManager';
+import ProjectFile from '../../models/files/ProjectFile';
+import ConfigManager from '../../models/config/ConfigManager';
 
 describe('ContractManager', function() {
   describe('methods', function() {

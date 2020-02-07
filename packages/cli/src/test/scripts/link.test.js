@@ -1,8 +1,8 @@
 'use strict';
 require('../setup');
 
-import link from '../../src/scripts/link';
-import ProjectFile from '../../src/models/files/ProjectFile';
+import link from '../../scripts/link';
+import ProjectFile from '../../models/files/ProjectFile';
 
 const should = require('chai').should();
 

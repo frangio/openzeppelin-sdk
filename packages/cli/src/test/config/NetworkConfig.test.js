@@ -6,7 +6,7 @@ import sinon from 'sinon';
 import path from 'path';
 
 import { cleanupfn } from '../helpers/cleanup';
-import NetworkConfig from '../../src/models/config/NetworkConfig';
+import NetworkConfig from '../../models/config/NetworkConfig';
 
 describe('NetworkConfig', function() {
   const tmpDir = 'test/tmp';

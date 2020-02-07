@@ -6,14 +6,14 @@ import { ZWeb3, Contracts, App, Package, ProxyAdmin, ProxyFactory } from '@openz
 import { accounts } from '@openzeppelin/test-environment';
 
 import sinon from 'sinon';
-import push from '../../src/scripts/push';
-import freeze from '../../src/scripts/freeze';
-import add from '../../src/scripts/add';
-import bumpVersion from '../../src/scripts/bump';
-import ProjectFile from '../../src/models/files/ProjectFile';
-import NetworkFile from '../../src/models/files/NetworkFile';
-import remove from '../../src/scripts/remove';
-import Dependency from '../../src/models/dependency/Dependency';
+import push from '../../scripts/push';
+import freeze from '../../scripts/freeze';
+import add from '../../scripts/add';
+import bumpVersion from '../../scripts/bump';
+import ProjectFile from '../../models/files/ProjectFile';
+import NetworkFile from '../../models/files/NetworkFile';
+import remove from '../../scripts/remove';
+import Dependency from '../../models/dependency/Dependency';
 import CaptureLogs from '../helpers/captureLogs';
 
 const should = require('chai').should();

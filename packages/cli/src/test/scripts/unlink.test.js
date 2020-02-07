@@ -1,8 +1,8 @@
 'use strict';
 require('../setup');
 
-import unlink from '../../src/scripts/unlink';
-import ProjectFile from '../../src/models/files/ProjectFile';
+import unlink from '../../scripts/unlink';
+import ProjectFile from '../../models/files/ProjectFile';
 
 describe('unlink script', function() {
   beforeEach(async function() {

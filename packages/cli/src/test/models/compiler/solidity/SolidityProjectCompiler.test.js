@@ -1,7 +1,7 @@
 require('../../../setup');
 
 import { Loggy } from '@openzeppelin/upgrades';
-import { compileProject } from '../../../../src/models/compiler/solidity/SolidityProjectCompiler';
+import { compileProject } from '../../../../models/compiler/solidity/SolidityProjectCompiler';
 import fs from 'fs-extra';
 import { unlinkSync, existsSync, statSync, utimesSync, writeFileSync } from 'fs';
 import path from 'path';

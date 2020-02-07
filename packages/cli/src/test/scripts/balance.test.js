@@ -6,9 +6,9 @@ import { Contracts } from '@openzeppelin/upgrades';
 import { accounts, web3 } from '@openzeppelin/test-environment';
 
 import CaptureLogs from '../helpers/captureLogs';
-import { fromWei } from '../../src/utils/units';
+import { fromWei } from '../../utils/units';
 
-import balance from '../../src/scripts/balance';
+import balance from '../../scripts/balance';
 
 const ERC20 = Contracts.getFromLocal('ERC20Fake');
 const ERC20Detailed = Contracts.getFromLocal('ERC20FakeDetailed');

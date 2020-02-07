@@ -1,6 +1,6 @@
 'use strict';
 
-import { checkVersion, isMigratableManifestVersion } from '../../src/models/files/ManifestVersion';
+import { checkVersion, isMigratableManifestVersion } from '../../models/files/ManifestVersion';
 
 const projectFileName = 'project.json';
 

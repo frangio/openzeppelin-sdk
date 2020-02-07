@@ -4,9 +4,9 @@ require('../setup');
 import { random } from 'lodash';
 import { accounts } from '@openzeppelin/test-environment';
 
-import queryDeployment from '../../src/scripts/query-deployment';
-import ProjectFile from '../../src/models/files/ProjectFile';
-import NetworkFile from '../../src/models/files/NetworkFile';
+import queryDeployment from '../../scripts/query-deployment';
+import ProjectFile from '../../models/files/ProjectFile';
+import NetworkFile from '../../models/files/NetworkFile';
 
 const should = require('chai').should();
 

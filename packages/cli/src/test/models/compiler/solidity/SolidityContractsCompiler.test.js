@@ -2,8 +2,8 @@
 require('../../../setup');
 
 import CaptureLogs from '../../../helpers/captureLogs';
-import { compile } from '../../../../src/models/compiler/solidity/SolidityContractsCompiler';
-import { setSolcCachePath, setSolcBinEnv } from '../../../../src/models/compiler/solidity/CompilerProvider';
+import { compile } from '../../../../models/compiler/solidity/SolidityContractsCompiler';
+import { setSolcCachePath, setSolcBinEnv } from '../../../../models/compiler/solidity/CompilerProvider';
 import sinon from 'sinon';
 import axios from 'axios';
 import path from 'path';

@@ -4,11 +4,11 @@ require('../setup');
 import { App, Package, ImplementationDirectory, Proxy } from '@openzeppelin/upgrades';
 import { accounts } from '@openzeppelin/test-environment';
 
-import publish from '../../src/scripts/publish';
-import push from '../../src/scripts/push';
-import create from '../../src/scripts/create';
-import ProjectFile from '../../src/models/files/ProjectFile';
-import NetworkFile from '../../src/models/files/NetworkFile';
+import publish from '../../scripts/publish';
+import push from '../../scripts/push';
+import create from '../../scripts/create';
+import ProjectFile from '../../models/files/ProjectFile';
+import NetworkFile from '../../models/files/NetworkFile';
 
 const should = require('chai').should();
 

@@ -2,9 +2,9 @@ require('../../setup');
 
 import sinon from 'sinon';
 
-import Truffle from '../../../src/models/config/TruffleConfig';
-import * as Compiler from '../../../src/models/compiler/Compiler';
-import ProjectFile from '../../../src/models/files/ProjectFile';
+import Truffle from '../../../models/config/TruffleConfig';
+import * as Compiler from '../../../models/compiler/Compiler';
+import ProjectFile from '../../../models/files/ProjectFile';
 import path from 'path';
 import fs from 'fs-extra';
 

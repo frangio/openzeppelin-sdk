@@ -4,10 +4,10 @@ require('../setup');
 import { Package } from '@openzeppelin/upgrades';
 import { accounts } from '@openzeppelin/test-environment';
 
-import push from '../../src/scripts/push';
-import freeze from '../../src/scripts/freeze';
-import ProjectFile from '../../src/models/files/ProjectFile';
-import NetworkFile from '../../src/models/files/NetworkFile';
+import push from '../../scripts/push';
+import freeze from '../../scripts/freeze';
+import ProjectFile from '../../models/files/ProjectFile';
+import NetworkFile from '../../models/files/NetworkFile';
 
 describe('freeze script', function() {
   const [owner] = accounts;

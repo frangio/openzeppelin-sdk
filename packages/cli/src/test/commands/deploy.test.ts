@@ -4,11 +4,11 @@ import sinon from 'sinon';
 import { Contracts, Transactions } from '@openzeppelin/upgrades';
 import { accounts } from '@openzeppelin/test-environment';
 
-import { ProxyType } from '../../src/scripts/interfaces';
-import ProjectFile from '../../src/models/files/ProjectFile';
-import NetworkFile from '../../src/models/files/NetworkFile';
+import { ProxyType } from '../../scripts/interfaces';
+import ProjectFile from '../../models/files/ProjectFile';
+import NetworkFile from '../../models/files/NetworkFile';
 
-import { action as deploy } from '../../src/commands/deploy/action';
+import { action as deploy } from '../../commands/deploy/action';
 
 const SimpleNonUpgradeable = Contracts.getFromLocal('SimpleNonUpgradeable');
 const WithConstructorNonUpgradeable = Contracts.getFromLocal('WithConstructorNonUpgradeable');

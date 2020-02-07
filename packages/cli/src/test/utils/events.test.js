@@ -5,7 +5,7 @@ import utils from 'web3-utils';
 import { Transactions, Contracts } from '@openzeppelin/upgrades';
 
 import CaptureLogs from '../helpers/captureLogs';
-import { describeEvents } from '../../src/utils/events';
+import { describeEvents } from '../../utils/events';
 
 const ImplV1 = Contracts.getFromLocal('ImplV1');
 

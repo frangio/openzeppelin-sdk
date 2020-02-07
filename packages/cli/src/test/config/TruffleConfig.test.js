@@ -4,7 +4,7 @@ import fs from 'fs-extra';
 import npm from 'npm-programmatic';
 import sinon from 'sinon';
 
-import TruffleConfig from '../../src/models/config/TruffleConfig';
+import TruffleConfig from '../../models/config/TruffleConfig';
 import CaptureLogs from '../helpers/captureLogs';
 
 describe('TruffleConfig', () => {

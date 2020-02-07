@@ -4,9 +4,9 @@ require('../setup');
 import sinon from 'sinon';
 import { expect } from 'chai';
 
-import add from '../../src/scripts/add';
-import addAll from '../../src/scripts/add-all';
-import ProjectFile from '../../src/models/files/ProjectFile';
+import add from '../../scripts/add';
+import addAll from '../../scripts/add-all';
+import ProjectFile from '../../models/files/ProjectFile';
 
 describe('add script', function() {
   const contractName = 'ImplV1';

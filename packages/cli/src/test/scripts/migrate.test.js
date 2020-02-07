@@ -5,13 +5,13 @@ import utils from 'web3-utils';
 import { Proxy, Contracts, toSemanticVersion } from '@openzeppelin/upgrades';
 import { accounts } from '@openzeppelin/test-environment';
 
-import push from '../../src/scripts/push';
-import create from '../../src/scripts/create';
-import update from '../../src/scripts/update';
-import publish from '../../src/scripts/publish';
-import setAdmin from '../../src/scripts/set-admin';
-import ProjectFile from '../../src/models/files/ProjectFile';
-import NetworkFile from '../../src/models/files/NetworkFile';
+import push from '../../scripts/push';
+import create from '../../scripts/create';
+import update from '../../scripts/update';
+import publish from '../../scripts/publish';
+import setAdmin from '../../scripts/set-admin';
+import ProjectFile from '../../models/files/ProjectFile';
+import NetworkFile from '../../models/files/NetworkFile';
 
 const Package = Contracts.getFromLib('Package');
 const DeprecatedApp = Contracts.getFromLib('DeprecatedApp');

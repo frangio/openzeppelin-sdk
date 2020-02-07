@@ -3,8 +3,8 @@ require('../setup');
 
 import { expect } from 'chai';
 import path from 'path';
-import ProjectFile from '../../src/models/files/ProjectFile';
-import { MANIFEST_VERSION } from '../../src/models/files/ManifestVersion';
+import ProjectFile from '../../models/files/ProjectFile';
+import { MANIFEST_VERSION } from '../../models/files/ManifestVersion';
 
 describe('ProjectFile', function() {
   describe('class methods', function() {

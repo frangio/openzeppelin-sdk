@@ -7,16 +7,16 @@ import { accounts } from '@openzeppelin/test-environment';
 
 import CaptureLogs from '../helpers/captureLogs';
 
-import add from '../../src/scripts/add';
-import push from '../../src/scripts/push';
-import bump from '../../src/scripts/bump';
-import link from '../../src/scripts/link';
-import createProxy from '../../src/scripts/create';
-import update from '../../src/scripts/update';
-import setAdmin from '../../src/scripts/set-admin';
-import ProjectFile from '../../src/models/files/ProjectFile';
-import NetworkFile from '../../src/models/files/NetworkFile';
-import { ProxyType } from '../../src/scripts/interfaces';
+import add from '../../scripts/add';
+import push from '../../scripts/push';
+import bump from '../../scripts/bump';
+import link from '../../scripts/link';
+import createProxy from '../../scripts/create';
+import update from '../../scripts/update';
+import setAdmin from '../../scripts/set-admin';
+import ProjectFile from '../../models/files/ProjectFile';
+import NetworkFile from '../../models/files/NetworkFile';
+import { ProxyType } from '../../scripts/interfaces';
 
 const ImplV1 = Contracts.getFromLocal('ImplV1');
 const GreeterV1 = Contracts.getFromNodeModules('mock-stdlib', 'GreeterImpl');

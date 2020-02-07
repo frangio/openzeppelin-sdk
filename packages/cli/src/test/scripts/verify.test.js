@@ -6,10 +6,10 @@ import axios from 'axios';
 
 import CaptureLogs from '../helpers/captureLogs';
 
-import verify from '../../src/scripts/verify';
-import push from '../../src/scripts/push';
-import ProjectFile from '../../src/models/files/ProjectFile';
-import NetworkFile from '../../src/models/files/NetworkFile';
+import verify from '../../scripts/verify';
+import push from '../../scripts/push';
+import ProjectFile from '../../models/files/ProjectFile';
+import NetworkFile from '../../models/files/NetworkFile';
 
 describe('verify script', function() {
   const contractAlias = 'Impl';

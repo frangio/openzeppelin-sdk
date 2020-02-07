@@ -7,7 +7,7 @@ import { accounts } from '@openzeppelin/test-environment';
 
 import { ZWeb3 } from '@openzeppelin/upgrades';
 
-import transfer from '../../src/scripts/transfer';
+import transfer from '../../scripts/transfer';
 
 describe('transfer script', function() {
   const [sender, receiver] = accounts;

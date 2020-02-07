@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import { ZWeb3 } from '@openzeppelin/upgrades';
 import { defaultSender, accounts as accountList } from '@openzeppelin/test-environment';
 
-import accounts from '../../src/scripts/accounts';
+import accounts from '../../scripts/accounts';
 import CaptureLogs from '../helpers/captureLogs';
 
 describe('accounts script', function() {

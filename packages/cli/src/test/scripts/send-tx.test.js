@@ -2,14 +2,14 @@
 require('../setup');
 import { accounts } from '@openzeppelin/test-environment';
 
-import add from '../../src/scripts/add';
-import push from '../../src/scripts/push';
-import sendTx from '../../src/scripts/send-tx';
-import createProxy from '../../src/scripts/create';
+import add from '../../scripts/add';
+import push from '../../scripts/push';
+import sendTx from '../../scripts/send-tx';
+import createProxy from '../../scripts/create';
 import { Contracts } from '@openzeppelin/upgrades';
 import CaptureLogs from '../helpers/captureLogs';
-import ProjectFile from '../../src/models/files/ProjectFile';
-import NetworkFile from '../../src/models/files/NetworkFile';
+import ProjectFile from '../../models/files/ProjectFile';
+import NetworkFile from '../../models/files/NetworkFile';
 
 const ImplV1 = Contracts.getFromLocal('ImplV1');
 

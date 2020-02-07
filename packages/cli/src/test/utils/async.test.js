@@ -1,7 +1,7 @@
 'use strict';
 require('../setup');
 
-import { allPromisesOrError } from '../../src/utils/async';
+import { allPromisesOrError } from '../../utils/async';
 
 describe('allPromisesOrError', function() {
   it('returns result from all promises', async function() {

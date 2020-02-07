@@ -2,8 +2,8 @@
 require('../setup');
 
 import CaptureLogs from '../helpers/captureLogs';
-import check from '../../src/scripts/check';
-import ProjectFile from '../../src/models/files/ProjectFile';
+import check from '../../scripts/check';
+import ProjectFile from '../../models/files/ProjectFile';
 
 const expect = require('chai').expect;
 
