@@ -170,16 +170,16 @@ workflows:
       - example-upgrades-library:
           requires: [test-lib]
       - example-create-instances-from-solidity:
-          requires: [test-lib, test-cli]
+          requires: [test-lib]
       - example-cli-create2:
-          requires: [test-lib, test-cli]
+          requires: [test-lib]
       - example-first-project:
-          requires: [test-lib, test-cli]
+          requires: [test-lib]
       - integration-cli-geth:
-          requires: [test-lib, test-cli]
+          requires: [test-lib]
       - integration-cli-hdwallet:
-          requires: [test-lib, test-cli]
+          requires: [test-lib]
       - integration-cli-kits:
-          requires: [test-lib, test-cli]
+          requires: [test-lib]
       - integration-cli-deploy:
-          requires: [test-lib, test-cli]
+          requires: [test-lib]
